@@ -1,0 +1,179 @@
+@keyframes gameOver {
+  0% {
+    top: 0%; }
+  50% {
+    top: 60%; }
+  100% {
+    top: 50%; } }
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem); }
+  50% {
+    transform: translateY(2rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes moveOutTop {
+  0% {
+    opacity: 1;
+    transform: translateY(0); }
+  50% {
+    transform: translateY(2rem); }
+  100% {
+    opacity: 0;
+    transform: translateY(-5rem); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+.game-over__text {
+  color: white;
+  text-align: center; }
+
+.game-over__primary-heading {
+  font-family: "Roboto", monospace;
+  font-size: 5rem;
+  font-weight: 300; }
+
+.game-over__secondary-heading {
+  font-family: "Roboto", monospace;
+  font-size: 3rem;
+  font-weight: 300; }
+
+.game-over__restart-btn {
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  display: inline-block;
+  font-size: 2rem;
+  padding: 1rem 3rem;
+  position: relative;
+  margin-top: 1.5rem; }
+  .game-over__restart-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .game-over__restart-btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  .game-over__restart-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.4); }
+  .game-over__restart-btn::after {
+    content: "";
+    background: white;
+    display: inline-block;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .4s;
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+
+.hide {
+  display: none;
+  transition: all 0.8s cubic-bezier(0.5, -0.89, 0.39, 1.95);
+  opacity: 0;
+  transform: translateY(-5rem); }
+
+.game__area {
+  background-image: radial-gradient(#51adcf, #a2d5f2);
+  width: 100%;
+  height: 95vh;
+  margin: auto;
+  z-index: 25; }
+
+.game__start-screen {
+  animation: moveInTop 1s;
+  background-color: #ff4b5c;
+  box-shadow: 2rem 1rem 1rem rgba(192, 192, 192, 0.7);
+  border-radius: 5px;
+  color: white;
+  font-family: 'Sansita Swashed', cursive;
+  font-size: 2rem;
+  font-weight: 300;
+  position: absolute;
+  left: 25%;
+  top: 100px;
+  width: 50%;
+  padding: 15px;
+  border: 1px solid white;
+  text-align: center; }
+
+.score {
+  background-color: #eeeeee;
+  border-radius: 10px;
+  border: 1.5px inset black;
+  color: black;
+  font-size: 1.5em;
+  font-family: fantasy;
+  height: 50px;
+  width: 100%;
+  padding-top: .5rem;
+  text-align: center;
+  z-index: 100; }
+
+.bird {
+  position: absolute;
+  line-height: 40px;
+  font-size: 1.5rem;
+  background-image: url("../img/bird.png");
+  background-size: 100%; }
+
+.wing {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background-color: gold;
+  width: 25px;
+  height: 12px;
+  border-radius: 5px; }
+
+.pipe1 {
+  position: absolute;
+  background-image: linear-gradient(to bottom, #28df99, #c4fb6d);
+  border-radius: 5px;
+  width: 10rem;
+  text-align: center;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black; }
+
+.pipe2 {
+  position: absolute;
+  background-image: linear-gradient(to bottom, #28df99, #c4fb6d);
+  border-radius: 5px;
+  width: 10rem;
+  text-align: center;
+  border: 1px solid black; }
+
+.game-over {
+  background: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200; }
+  .game-over__text {
+    animation: gameOver 1s;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .game-over__restart {
+    text-align: center; }

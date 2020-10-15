@@ -1,0 +1,19 @@
+.game-over {
+
+  &__text {
+    color: white;
+    text-align: center;
+  }
+
+  &__primary-heading {
+    font-family: "Roboto", monospace;
+    font-size: 5rem;
+    font-weight: 300;
+  }
+
+  &__secondary-heading {
+    font-family: "Roboto", monospace;
+    font-size: 3rem;
+    font-weight: 300;
+  }
+}

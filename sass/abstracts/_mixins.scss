@@ -1,0 +1,7 @@
+@mixin pipeConfig {
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgb(40,223,153), rgb(196,251,109));
+  border-radius: 5px;
+  width: 10rem;
+  text-align: center;
+}

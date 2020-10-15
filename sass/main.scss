@@ -1,0 +1,109 @@
+@import "sass/base/animations";
+@import "sass/base/base";
+@import "sass/base/typograhpy";
+@import "sass/components/button";
+@import "sass/abstracts/mixins";
+
+.hide {
+  display: none;
+  transition: all .8s cubic-bezier(.5,-0.89,.39,1.95);
+  opacity: 0;
+  transform: translateY(-5rem);
+}
+
+.game {
+
+  &__area {
+    background-image: radial-gradient(#51adcf, #a2d5f2);
+    width: 100%;
+    height: 95vh;
+    margin: auto;
+    z-index: 25;
+  }
+
+  &__start-screen {
+    animation: moveInTop 1s;
+    background-color: #ff4b5c;
+    box-shadow: 2rem 1rem 1rem rgba(192,192,192, .7);
+    border-radius: 5px;
+    color: white;
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 2rem;
+    font-weight: 300;
+    position: absolute;
+    left: 25%;
+    top: 100px;
+    width: 50%;
+    padding: 15px;
+    border: 1px solid white;
+    text-align: center;
+  }
+
+}
+
+.score {
+  background-color: #eeeeee;
+  border-radius: 10px;
+  border: 1.5px inset black;
+  color: black;
+  font-size: 1.5em;
+  font-family: fantasy;
+  height: 50px;
+  width: 100%;
+  padding-top: .5rem;
+  text-align: center;
+  z-index: 100;
+}
+
+.bird {
+  position: absolute;
+  line-height: 40px;
+  font-size: 1.5rem;
+  background-image: url("../img/bird.png");
+  background-size: 100%;
+}
+
+.wing {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background-color: gold;
+  width: 25px;
+  height: 12px;
+  border-radius: 5px;
+}
+
+.pipe1 {
+  @include pipeConfig;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.pipe2 {
+  @include pipeConfig;
+  border: 1px solid black;
+}
+
+.game-over {
+  background: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+
+  &__text {
+    animation: gameOver 1s;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__restart {
+    text-align: center;
+  }
+}
+
