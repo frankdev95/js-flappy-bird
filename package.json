@@ -1,0 +1,31 @@
+{
+  "name": "flappybird",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass sass/main.scss public/css/styles.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "12.18.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frankdev95/js-flappy-bird.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/frankdev95/js-flappy-bird/issues"
+  },
+  "homepage": "https://github.com/frankdev95/js-flappy-bird#readme",
+  "description": ""
+}
